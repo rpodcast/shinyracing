@@ -1,6 +1,4 @@
 ---
-title: "Shinyracing"
-subtitle: "Change me"
 format:
   revealjs: 
     theme:
@@ -8,18 +6,41 @@ format:
       - customfont.scss
     slide-number: true
     chalkboard: 
-      buttons: true
+      buttons: false
     preview-links: auto
     logo: images/quarto.png
-    footer: <https://quarto.org>
+    footer: <https://bit.ly/shinyracing>
+    css: styles.css
 resources:
   - demo.pdf
 ---
 
-## Very Rough Outline
+## How Shiny Fueled an Online Racing League! {.smaller background-image="images/title-slide-image.jpg"}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+::: {.transbox}
+### Eric Nantz
+
+### Statistician & Podcaster
+
+### Appsilon Shiny Conference
+
+### 28-April-2022
+:::
+:::
+
+::: {.column width="30%"}
+
+:::
+
+::::
+
+## Very Rough Outline {visibility="hidden"}
 
 Intro:
-* Possiblities of Shinyss  are almost endless
+* Possiblities of Shiny are almost endless
 * You have many opportunities to use R and with Shiny to make any project with any amount of data more interesting
 * Even ... gaming with your friends!
 
