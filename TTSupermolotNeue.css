@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'TTSupermolotNeue-Bold';
+    src: url('https://shinydevseries-assets.us-east-1.linodeobjects.com/TTSupermolotNeue-Bold.eot');
+    src: url('https://shinydevseries-assets.us-east-1.linodeobjects.com/TTSupermolotNeue-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://shinydevseries-assets.us-east-1.linodeobjects.com/TTSupermolotNeue-Bold.woff2') format('woff2'),
+        url('https://shinydevseries-assets.us-east-1.linodeobjects.com/TTSupermolotNeue-Bold.woff') format('woff'),
+        url('https://shinydevseries-assets.us-east-1.linodeobjects.com/TTSupermolotNeue-Bold.svg#TTSupermolotNeue-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

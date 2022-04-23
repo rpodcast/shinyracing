@@ -5,8 +5,8 @@ format:
       - dark
       - customfont.scss
     slide-number: false
-    chalkboard: 
-      buttons: false
+    self-contained: true
+    chalkboard: false
     preview-links: auto
     logo: images/quarto.png
     footer: <https://bit.ly/shinyracing>
