@@ -4,7 +4,7 @@ format:
     theme:
       - dark
       - customfont.scss
-    slide-number: true
+    slide-number: false
     chalkboard: 
       buttons: false
     preview-links: auto
