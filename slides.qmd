@@ -88,7 +88,7 @@ hotshot_points <- tibble::tribble(
   12, 1
 )
 
-reactable(hotshot_points)
+knitr::kable(hotshot_points)
 ```
 
 
