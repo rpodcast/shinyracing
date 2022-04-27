@@ -19,9 +19,7 @@ resources:
 
 ## How Shiny Fueled an Online Racing League! {.smaller background-image="images/title-slide-image.jpg"}
 
-:::: {.columns}
-
-::: {.column width="70%"}
+::: {.r-stack}
 ::: {.transbox}
 ### Eric Nantz
 
@@ -32,12 +30,6 @@ resources:
 ### 28-April-2022
 :::
 :::
-
-::: {.column width="30%"}
-
-:::
-
-::::
 
 ## A League of Linux Nerds
 
@@ -57,6 +49,48 @@ resources:
 ::: {.fragment .fade-in-then-out}
 Who enjoy racing!
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I ❤️ racing games 🏁 Taking Hotshot Racing from <a href="https://twitter.com/luckymountainUK?ref_src=twsrc%5Etfw">@luckymountainUK</a> for a spin on Linux 🐧 using <a href="https://twitter.com/hashtag/Ubuntu?src=hash&amp;ref_src=twsrc%5Etfw">#Ubuntu</a>, Steam and Proton. So far, it works perfectly👌A fantastic throwback to the 90s racers I used to love playing 🏎️ <a href="https://twitter.com/hashtag/HotshotRacing?src=hash&amp;ref_src=twsrc%5Etfw">#HotshotRacing</a> <a href="https://t.co/DMCgJD7vjA">pic.twitter.com/DMCgJD7vjA</a></p>&mdash; Martin Wimpress (@m_wimpress) <a href="https://twitter.com/m_wimpress/status/1305551772996513792?ref_src=twsrc%5Etfw">September 14, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+:::
+
+:::
+
+## Hotshot Racing League Setup {style="text-align: center" background-video="videos/racing_clip.mp4" background-video-loop="false" background-video-muted="true" background-size="contain" background-opacity="0.3"}
+
+::: {style="text-align: left"}
+
+::: {.panel-tabset}
+
+### Our Rules
+
+* 5 Grand Prix sessions
+* Each GP with 4 tracks raced in normal and mirrored layouts
+
+### Points System
+
+```{r}
+#| echo: false
+library(tibble)
+library(reactable)
+
+hotshot_points <- tibble::tribble(
+  ~position, ~points,
+  1, 12,
+  2, 11,
+  3, 10,
+  4, 9,
+  5, 8,
+  6, 7,
+  7, 6,
+  8, 5,
+  9, 4,
+  10, 3,
+  11, 2,
+  12, 1
+)
+
+reactable(hotshot_points)
+```
+
 
 :::
 

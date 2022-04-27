@@ -379,8 +379,14 @@
   </style>
   <script type="module" src="slides_files/libs/quarto-ojs/esbuild-bundle.js"></script>
   <link href="slides_files/libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+  <script src="slides_files/libs/core-js-2.5.3/shim.min.js"></script>
+  <script src="slides_files/libs/react-17.0.0/react.min.js"></script>
+  <script src="slides_files/libs/react-17.0.0/react-dom.min.js"></script>
+  <script src="slides_files/libs/reactwidget-1.0.0/react-tools.js"></script>
+  <script src="slides_files/libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+  <script src="slides_files/libs/reactable-binding-0.2.3/reactable.js"></script>
   <script type="ojs-define">
-  {"contents":[{"name":"actors","value":{"x":[-0.5245,-1.4393,2.0171,-0.3537,1.784,2.3989,0.5739,-1.2747,-1.5535,-1.5637,-0.0725,0.7101,-1.3785,-0.4471,0.2389,-1.4733,0.7192,-0.1197,0.8896,1.9077,0.1556,0.5331,-0.4094,-0.4488,-1.9371,0.201,1.9366,0.4334,-1.0424,0.8902,0.1238,-3.0589,-0.7677,0.7931,0.0453,-0.3109,0.2777,-1.9558,-0.4479,-0.7428,0.114,-1.2194,-0.4645,-0.2394,1.0197,-0.1663,0.2424,-1.4111,1.2228,0.431,0.1628,1.3824,0.2662,-0.5543,-1.5451,-2.6449,0.1551,-0.679,-0.5138,-0.7681,-1.6202,-1.0208,-0.2843,-0.6511,-0.4282,0.4217,-0.8652,0.2403,0.8268,-1.3858,1.3299,0.0531,0.1938,-0.206,-1.9195,1.2182,0.5136,0.47,-0.0178,-0.8157,-0.1036,-0.2249,-0.8685,-0.322,2.439,-0.0266,-1.5008,-1.4979,0.8952,-0.2825,-0.8831,0.5954,1.7647,-0.0678,0.2303,-0.1604,1.7895,2.6362,0.13,-0.8712],"y":[-0.1182,0.7822,-0.2625,-1.6813,-0.7392,-0.1828,-0.2655,-0.1061,-0.1492,0.1421,-1.6784,0.8573,-0.3638,2.5518,1.7428,0.3728,1.5835,0.1269,-0.6633,0.4911,-0.6299,-0.5643,1.5086,0.1674,-0.8497,0.5187,-1.6979,0.4797,-1.0223,0.2151,-0.3577,-0.1032,1.2137,1.7953,1.8903,-1.2529,1.7067,-1.6254,0.8052,0.8515,-0.2469,-1.1399,-0.367,0.0151,-2.026,-0.7607,2.6519,-1.0213,-0.6829,1.0822,0.3373,-0.1609,-1.9832,-0.4538,0.9737,1.6774,1.45,0.8573,-0.0142,-0.4992,-1.1312,0.6717,-1.2863,1.2113,1.472,0.8593,-0.0063,0.3073,-1.1769,-1.5659,-0.1796,1.7467,-0.9245,0.3405,-1.021,0.2504,-0.7387,-1.1971,0.268,0.3282,-0.4944,0.3179,1.0699,-0.1149,-1.1857,-1.3609,0.598,-1.8322,-0.9479,0.0977,-1.5192,0.5599,-0.9939,-0.2848,0.9099,0.4464,0.9929,-0.9432,-0.7115,-0.3535]}}]}
+  {"contents":[{"name":"actors","value":{"x":[-0.2799,0.7932,-0.1785,-0.4802,1.6422,2.0854,-1.152,-0.133,0.1884,-0.2155,-0.0062,1.4762,-0.5589,-1.1577,-0.0242,-1.2389,-0.4345,-1.4712,0.6371,1.1787,0.1748,-1.1085,-0.2421,-0.2982,0.0715,1.0162,1.4235,1.1345,0.2229,0.2213,-0.4422,-0.1516,-0.1005,-0.8436,-0.2321,-0.08,0.7906,-2.1828,0.0739,-0.2425,0.3702,-0.4622,-0.743,-0.0128,-0.0653,1.4488,-0.8248,0.2669,1.3052,-0.1692,0.1782,-1.4232,-0.5565,-0.542,0.8116,0.4032,-0.6225,1.4656,-1.6293,-0.5728,0.1125,0.7577,0.3481,-0.2133,0.0523,-1.0612,-1.0148,0.6364,0.3383,0.6883,0.0115,-0.2772,-1.2163,-1.4067,-0.1553,-1.6281,-2.7808,0.0916,-1.2528,0.5883,-1.0826,-0.513,-1.4819,0.9612,0.7671,0.23,-0.2594,-0.0465,-0.927,0.8189,-0.7264,-1.309,-2.6368,1.6228,-1.2221,0.2029,-0.5985,-1.4946,0.653,-0.2198],"y":[1.0164,-1.1886,0.5667,-0.135,-0.0998,0.4674,0.4121,-0.0669,-2.2623,1.4437,0.3417,-1.2317,-0.0823,1.7962,0.0171,1.252,-0.9649,0.107,-0.5096,-1.0804,-1.3115,1.8293,1.6384,0.0697,0.0348,-1.6986,0.3176,0.1852,0.6146,0.424,-0.6902,-0.5198,1.4328,-0.27,0.6424,-1.8511,-2.2564,1.6511,-0.6793,-0.2636,-0.6401,0.6374,-0.4155,1.0247,-0.3376,-0.6907,-1.7147,0.3369,-1.1101,-1.6483,-1.9457,0.2837,1.3179,-0.442,-0.4602,-1.0629,1.478,-0.3757,0.0827,-1.4531,-0.6851,-1.3833,-0.104,-0.0571,-1.2421,-1.6023,1.0214,-1.5489,0.0023,0.0957,-0.8685,-0.2654,-0.1072,-1.7802,1.9716,0.2621,-0.3138,2.2934,0.3613,1.4455,0.9594,1.8959,-0.685,-0.2763,1.1396,-0.1616,-0.0837,0.3953,-1.0324,0.6338,1.3353,1.0671,-0.1575,1.4045,1.1432,2.1027,1.3491,-0.9731,-0.1748,-1.008]}}]}
   </script>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -391,16 +397,12 @@
 
 <section id="how-shiny-fueled-an-online-racing-league" class="slide level2 smaller" data-background-image="images/title-slide-image.jpg">
 <h2>How Shiny Fueled an Online Racing League!</h2>
-<div class="columns">
-<div class="column" style="width:70%;">
+<div class="r-stack">
 <div class="transbox">
 <h3 id="eric-nantz">Eric Nantz</h3>
 <h3 id="statistician-podcaster">Statistician &amp; Podcaster</h3>
 <h3 id="appsilon-shiny-conference">Appsilon Shiny Conference</h3>
 <h3 id="april-2022">28-April-2022</h3>
-</div>
-</div><div class="column" style="width:30%;">
-
 </div>
 </div>
 </section>
@@ -423,6 +425,30 @@ I ❤️ racing games 🏁 Taking Hotshot Racing from <a href="https://twitter.c
 — Martin Wimpress (<span class="citation" data-cites="m_wimpress">@m_wimpress</span>) <a href="https://twitter.com/m_wimpress/status/1305551772996513792?ref_src=twsrc%5Etfw">September 14, 2020</a>
 </blockquote>
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
+</section>
+<section id="hotshot-racing-league-setup" class="slide level2" style="text-align: center" data-background-video="videos/racing_clip.mp4" data-background-video-loop="false" data-background-video-muted="true" data-background-size="contain" data-background-opacity="0.3">
+<h2>Hotshot Racing League Setup</h2>
+<div style="text-align: left">
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Our Rules</a></li><li><a href="#tabset-1-2">Points System</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<ul>
+<li>5 Grand Prix sessions</li>
+<li>Each GP with 4 tracks raced in normal and mirrored layouts</li>
+</ul>
+</div>
+<div id="tabset-1-2">
+<div class="cell">
+<div class="cell-output-display">
+<div id="htmlwidget-97078d0f0f45fab5af8b" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-97078d0f0f45fab5af8b">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"position":[1,2,3,4,5,6,7,8,9,10,11,12],"points":[12,11,10,9,8,7,6,5,4,3,2,1]},"columns":[{"accessor":"position","name":"position","type":"numeric"},{"accessor":"points","name":"points","type":"numeric"}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"cde9da7c9e3a6bb76788812f4d77da82","key":"cde9da7c9e3a6bb76788812f4d77da82"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </section>
@@ -556,7 +582,7 @@ I ❤️ racing games 🏁 Taking Hotshot Racing from <a href="https://twitter.c
 <span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span>  <span class="fu">geom_smooth</span>(<span class="at">formula =</span> y <span class="sc">~</span> x, <span class="at">method =</span> <span class="st">"loess"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="slides_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"><div class="footer">
+<img data-src="slides_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"><div class="footer">
 <p>Learn more: <a href="https://quarto.org/docs/presentations/revealjs/#executable-code">Executable Code</a></p>
 </div>
 </section>
@@ -823,16 +849,16 @@ a_{21}&amp; =b_{21}&amp;
 <section id="tabsets" class="slide level2 smaller scrollable" data-transition="slide">
 <h2>Tabsets</h2>
 <div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Plot</a></li><li><a href="#tabset-1-2">Data</a></li></ul>
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Plot</a></li><li><a href="#tabset-2-2">Data</a></li></ul>
 <div class="tab-content">
-<div id="tabset-1-1">
+<div id="tabset-2-1">
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="slides_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
+<p><img data-src="slides_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
 </div>
 </div>
 </div>
-<div id="tabset-1-2">
+<div id="tabset-2-2">
 <div class="cell">
 <div class="cell-output-display">
 <table style="width:100%;">
@@ -1334,9 +1360,9 @@ a_{21}&amp; =b_{21}&amp;
 </div>
 <div class="layout-sidebar layout-sidebar-left">
 <div class="cell panel-sidebar">
-<div class="sourceCode hidden" id="cb6" data-startfrom="469" data-source-offset="-0"><pre class="sourceCode numberSource js cell-code number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 468;"><span id="cb6-469"><a href="#cb6-469"></a>viewof talentWeight <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="op">-</span><span class="dv">2</span><span class="op">,</span> <span class="dv">2</span>]<span class="op">,</span> { <span class="dt">value</span><span class="op">:</span> <span class="fl">0.7</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.01</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"talent weight"</span> })</span>
-<span id="cb6-470"><a href="#cb6-470"></a>viewof looksWeight <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="op">-</span><span class="dv">2</span><span class="op">,</span> <span class="dv">2</span>]<span class="op">,</span> { <span class="dt">value</span><span class="op">:</span> <span class="fl">0.7</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.01</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"looks weight"</span> })</span>
-<span id="cb6-471"><a href="#cb6-471"></a>viewof minimum <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="op">-</span><span class="dv">2</span><span class="op">,</span> <span class="dv">2</span>]<span class="op">,</span> { <span class="dt">value</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.01</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"min fame"</span> })</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode hidden" id="cb6" data-startfrom="503" data-source-offset="-0"><pre class="sourceCode numberSource js cell-code number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 502;"><span id="cb6-503"><a href="#cb6-503"></a>viewof talentWeight <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="op">-</span><span class="dv">2</span><span class="op">,</span> <span class="dv">2</span>]<span class="op">,</span> { <span class="dt">value</span><span class="op">:</span> <span class="fl">0.7</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.01</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"talent weight"</span> })</span>
+<span id="cb6-504"><a href="#cb6-504"></a>viewof looksWeight <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="op">-</span><span class="dv">2</span><span class="op">,</span> <span class="dv">2</span>]<span class="op">,</span> { <span class="dt">value</span><span class="op">:</span> <span class="fl">0.7</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.01</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"looks weight"</span> })</span>
+<span id="cb6-505"><a href="#cb6-505"></a>viewof minimum <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="op">-</span><span class="dv">2</span><span class="op">,</span> <span class="dv">2</span>]<span class="op">,</span> { <span class="dt">value</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.01</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"min fame"</span> })</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <div id="ojs-cell-1-1" data-nodetype="declaration">
@@ -1360,8 +1386,8 @@ a_{21}&amp; =b_{21}&amp;
 </div>
 </div>
 <div class="cell panel-fill">
-<div class="sourceCode hidden" id="cb7" data-startfrom="476" data-source-offset="-0"><pre class="sourceCode numberSource js cell-code number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 475;"><span id="cb7-476"><a href="#cb7-476"></a><span class="im">import</span> { plotActors } <span class="im">from</span> <span class="st">'./actors.js'</span><span class="op">;</span></span>
-<span id="cb7-477"><a href="#cb7-477"></a><span class="fu">plotActors</span>(actors<span class="op">,</span> talentWeight<span class="op">,</span> looksWeight<span class="op">,</span> minimum)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode hidden" id="cb7" data-startfrom="510" data-source-offset="-0"><pre class="sourceCode numberSource js cell-code number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 509;"><span id="cb7-510"><a href="#cb7-510"></a><span class="im">import</span> { plotActors } <span class="im">from</span> <span class="st">'./actors.js'</span><span class="op">;</span></span>
+<span id="cb7-511"><a href="#cb7-511"></a><span class="fu">plotActors</span>(actors<span class="op">,</span> talentWeight<span class="op">,</span> looksWeight<span class="op">,</span> minimum)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <div id="ojs-cell-2-1" data-nodetype="declaration">
