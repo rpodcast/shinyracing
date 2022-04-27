@@ -5,7 +5,9 @@ format:
       - dark
       - customfont.scss
     slide-number: false
-    self-contained: true
+    self-contained: false
+    transition: slide
+    background-transition: fade
     chalkboard: false
     preview-links: auto
     logo: images/quarto.png
@@ -36,6 +38,59 @@ resources:
 :::
 
 ::::
+
+## A League of Linux Nerds
+
+. . .
+
+### ... who enjoy racing games!
+
+TODO: Add pictures of my friends
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I ❤️ racing games 🏁 Taking Hotshot Racing from <a href="https://twitter.com/luckymountainUK?ref_src=twsrc%5Etfw">@luckymountainUK</a> for a spin on Linux 🐧 using <a href="https://twitter.com/hashtag/Ubuntu?src=hash&amp;ref_src=twsrc%5Etfw">#Ubuntu</a>, Steam and Proton. So far, it works perfectly👌A fantastic throwback to the 90s racers I used to love playing 🏎️ <a href="https://twitter.com/hashtag/HotshotRacing?src=hash&amp;ref_src=twsrc%5Etfw">#HotshotRacing</a> <a href="https://t.co/DMCgJD7vjA">pic.twitter.com/DMCgJD7vjA</a></p>&mdash; Martin Wimpress (@m_wimpress) <a href="https://twitter.com/m_wimpress/status/1305551772996513792?ref_src=twsrc%5Etfw">September 14, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+## Over-engineering 
+
+Getting a bunch of tech geeks together can only result in tech projects
+
+* We need some R and Shiny in this!
+
+## Random Car Picker
+
+::: {style="text-align: center; margin-top: 1em"}
+[Wimpy's World Hotshot Racing Driver Selector](https://rpodcast.shinyapps.io/hotshot_random){preview-link="true" style="text-align: center"}
+:::
+
+## Inside Random Car Picker
+
+Intended audience: The competitors
+
+Learnings: First use of `{bslib}` to provide custom theming of an application
+
+
+`{slickR}` widget by Jonathan Sidi
+
+## Data Collector
+
+TODO: Deploy a demo version of data collector
+
+## Inside Data Collector
+
+Intended audience: me!
+
+Learnings: First time extracting data from an image using `tesseract`
+
+Send data to an online repository via `{pins}`
+
+Not meant to be glamorous, just functional to get the job done
+
+## HotShot Dashboard
+
+::: {style="text-align: center; margin-top: 1em"}
+[Wimpy's World Hotshot Racing Dashboard](https://rpodcast.shinyapps.io/hotshot_dashboard/){preview-link="true" style="text-align: center"}
+:::
+
+## Inside HotShot Dashboard
 
 ## Very Rough Outline {visibility="hidden"}
 
@@ -305,20 +360,6 @@ You can also use the following as a slide background:
 
 ::: footer
 Learn more: [Media Backgrounds](https://quarto.org/docs/presentations/revealjs/#image-backgrounds)
-:::
-
-## Absolute Position
-
-Position images or other elements at precise locations
-
-![](mini/images/kitten-400-350.jpeg){.absolute top="170" left="30" width="400" height="400"}
-
-![](mini/images/kitten-450-250.jpeg){.absolute .fragment top="150" right="80" width="450"}
-
-![](mini/images/kitten-300-200.jpeg){.absolute .fragment bottom="110" right="130" width="300"}
-
-::: footer
-Learn more: [Absolute Position](https://quarto.org/docs/presentations/revealjs/advanced.html#absolute-position)
 :::
 
 ## Auto-Animate {auto-animate="true" auto-animate-easing="ease-in-out"}
