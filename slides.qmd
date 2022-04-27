@@ -41,13 +41,26 @@ resources:
 
 ## A League of Linux Nerds
 
-. . .
+::: {.r-stack}
+::: {.fragment .semi-fade-out}
+![](images/wimpy.png){.absolute top=100 left=0}
 
-### ... who enjoy racing games!
+![](images/monica.png){.absolute top=500 left=0}
 
-TODO: Add pictures of my friends
+![](images/rpodcast-hexagon.png){.absolute top=250 left=320}
 
+![](images/bigpod2.png){.absolute top=100 left=700}
+
+![](images/yannick.png){.absolute top=500 left=700}
+:::
+
+::: {.fragment .fade-in-then-out}
+Who enjoy racing!
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I ❤️ racing games 🏁 Taking Hotshot Racing from <a href="https://twitter.com/luckymountainUK?ref_src=twsrc%5Etfw">@luckymountainUK</a> for a spin on Linux 🐧 using <a href="https://twitter.com/hashtag/Ubuntu?src=hash&amp;ref_src=twsrc%5Etfw">#Ubuntu</a>, Steam and Proton. So far, it works perfectly👌A fantastic throwback to the 90s racers I used to love playing 🏎️ <a href="https://twitter.com/hashtag/HotshotRacing?src=hash&amp;ref_src=twsrc%5Etfw">#HotshotRacing</a> <a href="https://t.co/DMCgJD7vjA">pic.twitter.com/DMCgJD7vjA</a></p>&mdash; Martin Wimpress (@m_wimpress) <a href="https://twitter.com/m_wimpress/status/1305551772996513792?ref_src=twsrc%5Etfw">September 14, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+:::
+
+:::
 
 ## Over-engineering 
 
