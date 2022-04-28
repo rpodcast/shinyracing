@@ -10,7 +10,7 @@ format:
     background-transition: fade
     chalkboard: false
     preview-links: auto
-    logo: images/quarto.png
+    logo: images/shinydevseries_hex.png
     footer: <https://bit.ly/shinyracing>
     css: styles.css
 resources:
@@ -151,7 +151,9 @@ Community Post: [community.rstudio.com/t/hotshots-racing-random-driver-car-app-s
 
 ## Data Collector
 
-Repo: [github.com/rpodcast/hotshots.random](https://github.com/rpodcast/hotshots.random){preview-link="false}
+![](images/data_app.png)
+
+Repo: [github.com/rpodcast/hotshots.data](https://github.com/rpodcast/hotshots.data){preview-link="false}
 
 ## Under the Hood
 
