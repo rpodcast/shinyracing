@@ -54,6 +54,8 @@ Who enjoy racing!
 
 :::
 
+## HotShot Racing In Action {background-video="videos/racing_clip.mp4" background-video-loop="true" background-video-muted="true" background-size="contain" background-opacity="0.3"}
+
 ## Hotshot Racing League Setup
 
 ::: {style="text-align: left"}
