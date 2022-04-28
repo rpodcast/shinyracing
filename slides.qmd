@@ -54,87 +54,122 @@ Who enjoy racing!
 
 :::
 
-## Hotshot Racing League Setup {style="text-align: center" background-video="videos/racing_clip.mp4" background-video-loop="false" background-video-muted="true" background-size="contain" background-opacity="0.3"}
+## Hotshot Racing League Setup
 
 ::: {style="text-align: left"}
 
 ::: {.panel-tabset}
 
-### Our Rules
+### Grand Prix
 
-* 5 Grand Prix sessions
-* Each GP with 4 tracks raced in normal and mirrored layouts
+![](images/tour_tracks.png){.absolute top=200 left=0 width="500" height="150"}
 
-### Points System
+![](images/pro_circuit_tracks.png){.absolute top=600 left=0 width="500" height="150"}
 
-```{r}
-#| echo: false
-library(tibble)
-library(reactable)
+![](images/hotshot_tracks.png){.absolute top=200 left=550 width="500" height="150"}
 
-hotshot_points <- tibble::tribble(
-  ~position, ~points,
-  1, 12,
-  2, 11,
-  3, 10,
-  4, 9,
-  5, 8,
-  6, 7,
-  7, 6,
-  8, 5,
-  9, 4,
-  10, 3,
-  11, 2,
-  12, 1
-)
+![](images/racing_elite_tracks.png){.absolute top=600 left=550 width="500" height="150"}
 
-knitr::kable(hotshot_points)
-```
+![](images/boss_level_tracks.png){.absolute top=400 left=300 width="500" height="150"}
 
+### Scoring and Rules
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+::: {style="font-size: 0.6em;"}
+
+| Position | Points |
+|:--------:|:------:|
+|     1    |   12   |
+|     2    |   11   |
+|     3    |   10   |
+|     4    |    9   |
+|     5    |    8   |
+|     6    |    7   |
+|     7    |    8   |
+|     8    |    5   |
+|     9    |    4   |
+|    10    |    3   |
+|    11    |    2   |
+|    12    |    1   |
 
 :::
 
 :::
 
-## Over-engineering 
-
-Getting a bunch of tech geeks together can only result in tech projects
-
-* We need some R and Shiny in this!
-
-## Random Car Picker
-
-::: {style="text-align: center; margin-top: 1em"}
-[Wimpy's World Hotshot Racing Driver Selector](https://rpodcast.shinyapps.io/hotshot_random){preview-link="true" style="text-align: center"}
+::: {.column width="70%"}
+1. All racers use the same car randomly selected before the race
+1. Racer with most points in each GP run (normal & mirrored) awarded overall points using same metric
+1. Racer with most points wins!
 :::
 
-## Inside Random Car Picker
+::::
 
-Intended audience: The competitors
+:::
 
-Learnings: First use of `{bslib}` to provide custom theming of an application
+:::
 
+## Racing is (not) Enough
+::: {.fragment .semi-fade-out}
+:::: {.columns}
 
-`{slickR}` widget by Jonathan Sidi
+::: {.column width="50%"}
+![Random car selection](images/car_example.jpg)
+:::
+
+::: {.column width="50%"}
+![Tracking Results](images/race_results.png)
+:::
+::::
+:::
+
+::: {.fragment .fade-in-then-out}
+::: {style="text-align: center"}
+🏎 This is a job for Shiny! 🏎
+:::
+:::
+
+## Random Car Picker 
+
+![](images/random_car_app.png)
+
+::: {style="font-size: 0.6em;"}
+App: [rpodcast.shinyapps.io/hotshot_random](https://rpodcast.shinyapps.io/hotshot_random){preview-link="true"}
+
+Repo: [github.com/rpodcast/hotshots.random](https://github.com/rpodcast/hotshots.random){preview-link="false}
+
+Community Post: [community.rstudio.com/t/hotshots-racing-random-driver-car-app-shiny-contest-submission/104927](https://community.rstudio.com/t/hotshots-racing-random-driver-car-app-shiny-contest-submission/104927){preview-link="false"}
+:::
+
+## Under the Hood
+
+* First use of [`{bslib}`](https://rstudio.github.io/bslib/) to provide custom theming of an application
+* Reactive values essential to keep track of car selection events
+* [`{slickR}`](https://yonicd.github.io/slickR) widget by Jonathan Sidi powers the slot-machine look
 
 ## Data Collector
 
-TODO: Deploy a demo version of data collector
+Repo: [github.com/rpodcast/hotshots.random](https://github.com/rpodcast/hotshots.random){preview-link="false}
 
-## Inside Data Collector
+## Under the Hood
 
-Intended audience: me!
-
-Learnings: First time extracting data from an image using `tesseract`
-
-Send data to an online repository via `{pins}`
-
-Not meant to be glamorous, just functional to get the job done
+* Extract text from an image using `tesseract`
+* Use `{excelR}` for convenient data revisions
+* Store data in external repository via `{pins}`
+* Not meant to be glamorous, just functional to get the job done
 
 ## HotShot Dashboard
 
-::: {style="text-align: center; margin-top: 1em"}
-[Wimpy's World Hotshot Racing Dashboard](https://rpodcast.shinyapps.io/hotshot_dashboard/){preview-link="true" style="text-align: center"}
+![](images/dashboard_app.png)
+
+::: {style="font-size: 0.6em;"}
+App: [rpodcast.shinyapps.io/hotshot_dashboard](https://rpodcast.shinyapps.io/hotshot_dashboard){preview-link="true"}
+
+Repo: [github.com/rpodcast/hotshots.dashboard](https://github.com/rpodcast/hotshots.dashboard){preview-link="false}
+
+Community Post: [community.rstudio.com/t/the-hotshots-racing-dashboard-shiny-contest-submission/104925](https://community.rstudio.com/t/the-hotshots-racing-dashboard-shiny-contest-submission/104925){preview-link="false"}
 :::
 
 ## Inside HotShot Dashboard
