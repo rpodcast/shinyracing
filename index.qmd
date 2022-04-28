@@ -2,7 +2,7 @@
 format:
   revealjs: 
     theme:
-      - dark
+      - league
       - customfont.scss
     slide-number: false
     self-contained: true
@@ -120,7 +120,7 @@ Who enjoy racing!
 :::
 
 ::: {.column width="50%"}
-![Tracking Results](images/race_results.png)
+![Collect and Present Results](images/race_results.png)
 :::
 ::::
 :::
@@ -212,9 +212,12 @@ Community Post: [community.rstudio.com/t/the-hotshots-racing-dashboard-shiny-con
 * [`{plotly}`](https://plotly-r.com) Interactive visualization with animation and styling
 * [`{pins}`](https://pins.rstudio.com) Retrieve cleaned data from external repositories
 
-## Inside the Pit Shop
+## Crossing the Finish Line
 
-Add more here
+* Set yourself up for success from the beginning
+     + Consistent code structure powered by [`{golem}`](https://thinkr-open.github.io/golem)
+* "It's never just Shiny"
+* Understand the personas of your application's customers early!
 
 ## Thank You!
 
