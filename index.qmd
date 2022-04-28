@@ -1,0 +1,302 @@
+---
+format:
+  revealjs: 
+    theme:
+      - dark
+      - customfont.scss
+    slide-number: false
+    self-contained: true
+    transition: slide
+    background-transition: fade
+    chalkboard: false
+    preview-links: auto
+    logo: images/shinydevseries_hex.png
+    footer: <https://bit.ly/shinyracing>
+    css: styles.css
+resources:
+  - demo.pdf
+---
+
+## How Shiny Fueled an Online Racing League! {.smaller background-image="images/title-slide-image.jpg"}
+
+::: {.r-stack}
+::: {.transbox}
+### Eric Nantz
+
+### Statistician & Podcaster
+
+### Appsilon Shiny Conference
+
+### 28-April-2022
+:::
+:::
+
+## A League of Linux Nerds
+
+::: {.r-stack}
+::: {.fragment .semi-fade-out}
+![](images/wimpy.png){.absolute top=100 left=0}
+
+![](images/monica.png){.absolute top=500 left=0}
+
+![](images/rpodcast-hexagon.png){.absolute top=250 left=320}
+
+![](images/bigpod2.png){.absolute top=100 left=700}
+
+![](images/yannick.png){.absolute top=500 left=700}
+:::
+
+::: {.fragment .fade-in-then-out}
+Who enjoy racing!
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I ❤️ racing games 🏁 Taking Hotshot Racing from <a href="https://twitter.com/luckymountainUK?ref_src=twsrc%5Etfw">@luckymountainUK</a> for a spin on Linux 🐧 using <a href="https://twitter.com/hashtag/Ubuntu?src=hash&amp;ref_src=twsrc%5Etfw">#Ubuntu</a>, Steam and Proton. So far, it works perfectly👌A fantastic throwback to the 90s racers I used to love playing 🏎️ <a href="https://twitter.com/hashtag/HotshotRacing?src=hash&amp;ref_src=twsrc%5Etfw">#HotshotRacing</a> <a href="https://t.co/DMCgJD7vjA">pic.twitter.com/DMCgJD7vjA</a></p>&mdash; Martin Wimpress (@m_wimpress) <a href="https://twitter.com/m_wimpress/status/1305551772996513792?ref_src=twsrc%5Etfw">September 14, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+:::
+
+:::
+
+## Hotshot Racing League Setup
+
+::: {style="text-align: left"}
+
+::: {.panel-tabset}
+
+### Grand Prix
+
+![](images/tour_tracks.png){.absolute top=200 left=0 width="500" height="150"}
+
+![](images/pro_circuit_tracks.png){.absolute top=600 left=0 width="500" height="150"}
+
+![](images/hotshot_tracks.png){.absolute top=200 left=550 width="500" height="150"}
+
+![](images/racing_elite_tracks.png){.absolute top=600 left=550 width="500" height="150"}
+
+![](images/boss_level_tracks.png){.absolute top=400 left=300 width="500" height="150"}
+
+### Scoring and Rules
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+::: {style="font-size: 0.6em;"}
+
+| Position | Points |
+|:--------:|:------:|
+|     1    |   12   |
+|     2    |   11   |
+|     3    |   10   |
+|     4    |    9   |
+|     5    |    8   |
+|     6    |    7   |
+|     7    |    8   |
+|     8    |    5   |
+|     9    |    4   |
+|    10    |    3   |
+|    11    |    2   |
+|    12    |    1   |
+
+:::
+
+:::
+
+::: {.column width="70%"}
+1. All racers use the same car randomly selected before the race
+1. Racer with most points in each GP run (normal & mirrored) awarded overall points using same metric
+1. Racer with most points wins!
+:::
+
+::::
+
+:::
+
+:::
+
+## Racing is (not) Enough
+::: {.fragment .semi-fade-out}
+:::: {.columns}
+
+::: {.column width="50%"}
+![Random car selection](images/car_example.jpg)
+:::
+
+::: {.column width="50%"}
+![Tracking Results](images/race_results.png)
+:::
+::::
+:::
+
+::: {.fragment .fade-in-then-out}
+::: {style="text-align: center"}
+🏎 This is a job for Shiny! 🏎
+:::
+:::
+
+## Random Car Picker 
+
+![](images/random_car_app.png)
+
+::: {style="font-size: 0.6em;"}
+App: [rpodcast.shinyapps.io/hotshot_random](https://rpodcast.shinyapps.io/hotshot_random){preview-link="true"}
+
+Repo: [github.com/rpodcast/hotshots.random](https://github.com/rpodcast/hotshots.random){preview-link="false}
+
+Community Post: [community.rstudio.com/t/hotshots-racing-random-driver-car-app-shiny-contest-submission/104927](https://community.rstudio.com/t/hotshots-racing-random-driver-car-app-shiny-contest-submission/104927){preview-link="false"}
+:::
+
+## Under the Hood
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+* [`{bslib}`](https://rstudio.github.io/bslib/) to create custom theme of the application 
+* Reactive values essential to keep track of car selection events
+* [`{slickR}`](https://yonicd.github.io/slickR) powers the slot-machine look
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| label: slickrtesting
+#| echo: false
+library(slickR)
+car_files <- fs::dir_ls("images/car_pics")
+driver_files <- fs::dir_ls("images/driver_pics")
+
+slick_driver <- slickR::slickR(driver_files, width = '45%')
+slick_driver + slickR::settings(autoplay = TRUE, autoplaySpeed = 1000)
+
+slick_car <- slickR::slickR(car_files, width = '45%')
+slick_car + slickR::settings(autoplay = TRUE, autoplaySpeed = 1000)
+```
+
+::: 
+
+::::
+
+
+## Data Collector
+
+![](images/data_app.png)
+
+Repo: [github.com/rpodcast/hotshots.data](https://github.com/rpodcast/hotshots.data){preview-link="false}
+
+## Under the Hood
+
+* [`{magick}`](https://docs.ropensci.org/magick) to import screenshots and prepare for analysis
+* [`{tesseract}`](https://docs.ropensci.org/tesseract) to extract result text with OCR
+* [`{excelR}`](https://swechhya.github.io/excelR) for convenient interface to make corrections
+* [`{pins}`](https://pins.rstudio.com) Store cleaned data in external repositories
+* Not meant to be glamorous, but just functional to get the job done!
+
+## HotShot Dashboard
+
+![](images/dashboard_app.png)
+
+::: {style="font-size: 0.6em;"}
+App: [rpodcast.shinyapps.io/hotshot_dashboard](https://rpodcast.shinyapps.io/hotshot_dashboard){preview-link="true"}
+
+Repo: [github.com/rpodcast/hotshots.dashboard](https://github.com/rpodcast/hotshots.dashboard){preview-link="false}
+
+Community Post: [community.rstudio.com/t/the-hotshots-racing-dashboard-shiny-contest-submission/104925](https://community.rstudio.com/t/the-hotshots-racing-dashboard-shiny-contest-submission/104925){preview-link="false"}
+:::
+
+## Under the Hood
+
+* [`{bs4Dash}`](https://rinterface.github.io/bs4Dash) Powerful dashboard UI using Bootstrap 4
+* [`{fresh}`](https://dreamrs.github.io/fresh) Custom theming of dashboards and other UIs 
+* [`{waiter}`](https://waiter.john-coene.com) Show a loading screen while app is starting
+* [`{reactable}`](https://glin.github.io/reactable) Interactive tables with amazing features
+* [`{echarts4R}`](https://echarts4r.john-coene.com) Widgets to present key statistics fit for a racing league
+* [`{plotly}`](https://plotly-r.com) Interactive visualization with animation and styling
+* [`{pins}`](https://pins.rstudio.com) Retrieve cleaned data from external repositories
+
+## Thank You!
+
+::: {.absolute top=200 left=50}
+`r fontawesome::fa("twitter", fill = "steelblue", height = "3em")`
+:::
+
+::: {.absolute top=325 left=0}
+::: {.large2}
+[@theRcast](https://twitter.com/thercast)
+:::
+:::
+
+::: {.absolute top=200 left=350}
+`r fontawesome::fa("github", fill = "steelblue", height = "3em")`
+:::
+
+::: {.absolute top=325 left=300}
+::: {.large2}
+[@rpodcast](https://github.com/rpodcast)
+:::
+:::
+
+::: {.absolute top=200 left=675}
+`r fontawesome::fa("microphone", fill = "steelblue", height = "3em")`
+:::
+
+::: {.absolute top=325 left=600}
+::: {.large2}
+[r-podcast.org](https://r-podcast.org)
+:::
+:::
+
+::: {.absolute top=400 left=150}
+`r fontawesome::fa("youtube", fill = "steelblue", height = "3em")`
+:::
+
+::: {.absolute top=500 left=0}
+::: {.large2}
+[shinydevseries.com](https://shinydevseries.com)
+:::
+:::
+
+::: {.absolute top=400 left=550}
+`r fontawesome::fa("newspaper", fill = "steelblue", height = "3em")`
+:::
+
+::: {.absolute top=500 left=500}
+::: {.large2}
+[rweekly.org](https://rweekly.org)
+:::
+:::
+
+::: {.absolute top=400 left=900}
+`r fontawesome::fa("twitch", fill = "steelblue", height = "3em")`
+:::
+
+::: {.absolute top=500 left=850}
+::: {.large2}
+[@rpodcast](https://twitch.tv/rpodcast)
+:::
+:::
+
+
+## Very Rough Outline {visibility="hidden"}
+
+Intro:
+* Possiblities of Shiny are almost endless
+* You have many opportunities to use R and with Shiny to make any project with any amount of data more interesting
+* Even ... gaming with your friends!
+
+Racing Setup:
+* Describe Hotshot Racing
+* Group of very happy and proud linux enthusiasts
+* We of course decided to over-engineer everything about our racing league
+* As the sole data scientist of the group, I had to find a way to bring R and especially Shiny in the picture
+
+The Apps:
+* Enhancement to league user experience: Random car picker
+* Data collection: The screenshot extractor for racing results
+* The Dashboard: Display league results with interactive plots and tables
+
+Throughout the presentation: grab misc clips from the YouTube recordings showing the apps in action
+* The last car in the season (Keiko)
+
+How these apps benefited my actual dayjob work
+* Dashboard: Tap into data stored on a separate repository (pinboard with GitHub). 
+* Animation in a plotly plot
+* Data collector: My first adventures with tesseract for extracting text (numbers and text) from graphic files
