@@ -212,6 +212,10 @@ Community Post: [community.rstudio.com/t/the-hotshots-racing-dashboard-shiny-con
 * [`{plotly}`](https://plotly-r.com) Interactive visualization with animation and styling
 * [`{pins}`](https://pins.rstudio.com) Retrieve cleaned data from external repositories
 
+## Inside the Pit Shop
+
+Add more here
+
 ## Thank You!
 
 ::: {.absolute top=200 left=50}
